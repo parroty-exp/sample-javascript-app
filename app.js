@@ -3,6 +3,13 @@ const RateLimit = require('express-rate-limit');
 const app = express()
 const port = 3000
 
+function f() {
+    x = 23;
+    let x;
+}
+
+console.log(f());
+
 // apply rate limiter to all requests
 var limiter = new RateLimit({
     windowMs: 1*60*1000, // 1 minute
