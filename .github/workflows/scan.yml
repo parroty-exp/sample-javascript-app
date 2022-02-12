@@ -11,12 +11,10 @@ on:
 jobs:
   CodeQL-Build:
     runs-on: ubuntu-latest
-
     permissions:
       security-events: write
       actions: read
       contents: read
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -24,7 +22,5 @@ jobs:
         uses: github/codeql-action/init@v1
         with:
           languages: javascript
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v1
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
