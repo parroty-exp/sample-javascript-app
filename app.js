@@ -26,6 +26,11 @@ app.get('/file/:fileId', (req, res) => {
     res.sendFile("/workspace/sample-javascript-app/" + fileId);
 })
 
+app.get('/echo/:message', (req, res) => {
+    let message = req.params.message;
+    res.send(`Hello ${message}`)
+});
+
 app.listen(port, '0.0.0.0', () => {
     console.log(`Example app listening at http://0.0.0.0:${port}`)
 })
