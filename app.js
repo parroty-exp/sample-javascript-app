@@ -26,6 +26,11 @@ app.get('/file/:fileId', (req, res) => {
     res.sendFile("/workspace/sample-javascript-app/" + fileId);
 })
 
+app.get('/echo/:message', (req, res) => {
+    let message = req.params.message;
+    res.send(`Hello ${message}`)
+});
+
 app.get('/json-file', (req, res) => {
     var fileId = JSON.parse(req.params.fieldId);
     res.sendFile("/workspace/sample-javascript-app/" + fileId);
