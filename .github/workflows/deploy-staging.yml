@@ -1,4 +1,4 @@
-name: "Deploy to staging - v4"
+name: "Deploy to staging - v5"
 
 on:
   push:
