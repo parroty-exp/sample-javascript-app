@@ -17,6 +17,7 @@ jobs:
         shell: bash
         run: echo ${{ secrets.TARGET_BRANCH }} >> target.log
       - name: Save logs
+        uses: actions/upload-artifact@v2
         with:
           name: target.log
           path: ./target.log
