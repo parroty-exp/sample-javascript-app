@@ -1,0 +1,22 @@
+name: "Deploy to staging"
+
+on:
+  push:
+    branches: [staging]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://staging.example.net
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Echo variable
+        shell: bash
+        run: echo ${{ secrets.TARGET_BRANCH }} >> target.log
+      - name: Save logs
+        with:
+          name: target.log
+          path: ./target.log
