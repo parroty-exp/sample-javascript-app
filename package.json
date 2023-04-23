@@ -21,7 +21,7 @@
   "dependencies": {
     "express": "^4.17.3",
     "express-rate-limit": "^6.4.0",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.22",
     "path-parse": "^1.0.7"
   }
 }
